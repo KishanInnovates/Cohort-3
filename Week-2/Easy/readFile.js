@@ -18,3 +18,11 @@ function expensiveOperation() {
     console.log('Expensive Operation completec: ', sum);
 }
 expensiveOperation();
+
+fs.writeFile('example.txt', 'Hello Kishan!', (err, data) => {
+    if (err) {
+        console.error(err);
+    }
+    console.log('Saved');
+    
+})
