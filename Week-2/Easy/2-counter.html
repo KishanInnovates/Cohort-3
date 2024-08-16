@@ -7,17 +7,15 @@
 </head>
 <body>
     <h1>Counter: <span id="counter">0</span></h1>
-    
     <script>
-        let counter = 0;
+        let secondCounter = 0;
+        function incrementCounter(){
+            secondCounter++;
+            document.getElementById('counter').innerText = secondCounter;
+            setTimeout(incrementCounter, 1000);
+        }
 
-        setInterval(() => {
-            counter++;
-            document.getElementById('counter').innerText = counter;
-        },1000);
-
-
-        
+        incrementCounter();
     </script>
 </body>
 </html>
