@@ -6,4 +6,15 @@ function wait(n) {
     })
 }
 
+function sleep(miliseconds) {
+    return new Promise((resolve) => {
+        const start = Date.now();
+        while (Date.now() - start < miliseconds) {
+            
+        }
+        resolve();
+    })
+}
+
 module.exports = wait;
+module.exports = sleep;
